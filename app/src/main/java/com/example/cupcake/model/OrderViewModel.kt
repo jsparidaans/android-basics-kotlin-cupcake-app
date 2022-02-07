@@ -28,4 +28,8 @@ class OrderViewModel : ViewModel() {
     fun setDate(pickupDate: String) {
         _date.value = pickupDate
     }
+
+    fun hasNoFlavor():Boolean{
+        return _flavor.value.isNullOrEmpty()
+    }
 }
