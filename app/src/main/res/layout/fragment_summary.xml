@@ -58,8 +58,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/order_summary_margin"
-                    tools:text="6 cupcakes"
-                    android:text="@{viewModel.quantity.toString()}"/>
+                    android:text="@{viewModel.quantity.toString()}"
+                    tools:text="6 cupcakes" />
 
                 <View
                     android:id="@+id/divider1"
@@ -82,8 +82,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/order_summary_margin"
-                    tools:text="Chocolate"
-                    android:text="@{viewModel.flavor}"/>
+                    android:text="@{viewModel.flavor}"
+                    tools:text="Chocolate" />
 
                 <View
                     android:id="@+id/divider2"
@@ -106,8 +106,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/order_summary_margin"
-                    tools:text="Sunday"
-                    android:text="@{viewModel.date}"/>
+                    android:text="@{viewModel.date}"
+                    tools:text="Sunday" />
 
                 <View
                     android:id="@+id/divider3"
