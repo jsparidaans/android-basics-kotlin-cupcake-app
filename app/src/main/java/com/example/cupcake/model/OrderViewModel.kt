@@ -2,12 +2,12 @@ package com.example.cupcake.model
 
 import android.icu.text.SimpleDateFormat
 import android.icu.util.Calendar
-import android.os.Build
-import androidx.annotation.RequiresApi
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import java.util.*
+
+private const val PRICE_PER_CUPCAKE = 2.00
 
 class OrderViewModel : ViewModel() {
     private val _quantity = MutableLiveData<Int>()
@@ -24,8 +24,13 @@ class OrderViewModel : ViewModel() {
 
     val dateOptions = getPickupOptions()
 
+    private fun updatePrice() {
+        _price.value = (quantity.value ?: 0) * PRICE_PER_CUPCAKE
+    }
+
     fun setQuantity(numberOfCupcakes: Int) {
         _quantity.value = numberOfCupcakes
+        updatePrice()
     }
 
     fun setFlavor(desiredFlavor: String) {
